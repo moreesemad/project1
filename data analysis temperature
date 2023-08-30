@@ -1,0 +1,16 @@
+
+import pandas as pd
+
+# Load the data from a CSV file
+data = pd.read_csv('temperature_data.csv')
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create a line plot of temperature over time
+plt.figure(figsize=(10, 6))
+sns.lineplot(x='date', y='temperature', data=data)
+plt.title('Temperature Over Time')
+plt.xlabel('Date')
+plt.ylabel('Temperature')
+plt.xticks(rotation=45)
+plt.show()
