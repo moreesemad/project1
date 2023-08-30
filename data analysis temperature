@@ -1,14 +1,13 @@
-
 import pandas as pd
 
 # Load the data from a CSV file
-data = pd.read_csv('temperature_data.csv')
+data = pd.DataFrame({'days':['saturday','sunday','monday','tuseday','wednesday','thursday','friday'],'temperature(c)' : [22,24,25,23,21,25,26]})
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Create a line plot of temperature over time
 plt.figure(figsize=(10, 6))
-sns.lineplot(x='date', y='temperature', data=data)
+sns.lineplot(data=data)
 plt.title('Temperature Over Time')
 plt.xlabel('Date')
 plt.ylabel('Temperature')
